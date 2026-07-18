@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Une Soirée">
+  <meta name="theme-color" content="#1a0428">
+  <title>Une Soirée Avec Toi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="blur"></div>
+  <div class="particles">
+    <span class="particle" style="--x:10%; --y:15%; --size:10px; --delay:0s;"></span>
+    <span class="particle" style="--x:80%; --y:18%; --size:14px; --delay:1.5s;"></span>
+    <span class="particle" style="--x:25%; --y:70%; --size:12px; --delay:2.8s;"></span>
+    <span class="particle" style="--x:55%; --y:40%; --size:18px; --delay:1.2s;"></span>
+    <span class="particle" style="--x:90%; --y:60%; --size:8px; --delay:3.4s;"></span>
+    <span class="particle" style="--x:40%; --y:25%; --size:16px; --delay:0.8s;"></span>
+  </div>
+  <header class="topbar">
+    <div class="nav-logo">Une Soirée</div>
+    <nav class="nav-links">
+      <a href="#lieux">Lieux</a>
+      <a href="#heures">Heures</a>
+      <a href="#message">Invitation</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+  <div class="container">
+    <section id="lieux" class="hero">
+      <p class="subtitle">Une invitation rien que pour toi</p>
+      <h1>Notre Date</h1>
+      <p class="date">Mardi 28 Juillet</p>
+      <a class="hero-btn" href="#heures">Réserver ma place</a>
+      <div class="scroll">↓ Fais défiler ↓</div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Choisis le lieu</h2>
+      <div class="places">
+        <article class="card" data-place="Union Le Club">
+          <h3>Union Le Club</h3>
+          <p>Une soirée qui commence bien.</p>
+        </article>
+        <article class="card" data-place="Elena Café">
+          <h3>Elena Café</h3>
+          <p>Une ambiance douce et élégante.</p>
+        </article>
+        <article class="card" data-place="Black Liste">
+          <h3>Black Liste</h3>
+          <p>Parce que l'imprévu a parfois du charme.</p>
+        </article>
+        <article class="card" data-place="Sarayi">
+          <h3>Sarayi</h3>
+          <p>Un moment simple, mais mémorable.</p>
+        </article>
+        <article class="card" data-place="Chocolatbar">
+          <h3>Chocolatbar</h3>
+          <p>Quelques douceurs ne font jamais de mal.</p>
+        </article>
+        <article class="card" data-place="Elite Coffee">
+          <h3>Elite Coffee</h3>
+          <p>Un bon café accompagné d'une très belle compagnie.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="heures" class="section">
+      <h2 class="section-title">Choisis l'heure</h2>
+      <div class="hours">
+        <div class="hour" data-time="18H">18H</div>
+        <div class="hour" data-time="20H">20H</div>
+        <div class="hour" data-time="21H">21H</div>
+      </div>
+    </section>
+
+    <section class="section details">
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Design mobile</h3>
+          <p>Un rendu fluide sur téléphone et tablette, avec de belles animations.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Navigation simple</h3>
+          <p>Accès rapide aux lieux, aux horaires et à l’invitation.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Ambiance rose</h3>
+          <p>Couleurs douces, finition premium et lecture confortable.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="message" class="section message">
+      <h2>Confirme ta présence</h2>
+      <p>Remplis ton prénom, choisis ton lieu et ton heure préférée, puis ajoute un petit mot.</p>
+      <div class="highlight">Je pourrai voir ta réponse depuis la page admin.</div>
+      <form id="responseForm" class="response-form">
+        <div class="form-group">
+          <label for="name">Ton prénom</label>
+          <input id="name" name="name" type="text" placeholder="Ton prénom" required>
+        </div>
+        <input type="hidden" id="place" name="place">
+        <input type="hidden" id="time" name="time">
+        <div class="form-group">
+          <label for="message">Ton petit mot</label>
+          <textarea id="message" name="message" rows="4" placeholder="J'ai hâte de te voir..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer ma réponse</button>
+        <p id="formStatus" class="form-status"></p>
+      </form>
+      <div id="summary" class="response-summary"></div>
+      <div class="signature">Je m'occupe de nous. ❤️</div>
+    </section>
+
+    <footer class="site-footer">
+      <p>Site conçu pour être hébergé en ligne et accessible depuis chez elle.</p>
+      <p>Partage avec elle le lien public fourni par l'hébergeur.</p>
+      <p>Pour voir sa réponse : <strong><a href="admin.html" class="footer-link">admin.html</a></strong></p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
