@@ -1,0 +1,10 @@
+{
+  "name": "une-soiree-site",
+  "version": "1.0.0",
+  "description": "Page d'invitation mobile avec formulaire et page admin locale.",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}
